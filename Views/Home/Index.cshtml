@@ -1,0 +1,27 @@
+﻿@model List<ProdutoModel>
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<h1 class="text-center">Loja MVC</h1>
+
+<hr />
+
+<div class="loja-produtos d-flex flex-wrap justify-content-center gap-4">
+	@if (Model != null && Model.Any())
+	{
+		foreach (var produto in Model)
+		{
+					<a asp-route-id="@produto.Id" asp-action="Produto">
+						<div class="card" style="width: 18rem;">
+							<img src="@produto.Imagem1" class="card-img-top">
+							<div class="card-body">
+								<h3>R$ @produto.Preco</h3>
+								<h4>@produto.Nome</h4>
+								<p class="card-text">@produto.Descricao</p>
+							</div>
+						</div>
+					</a>
+		}
+	}
+</div>

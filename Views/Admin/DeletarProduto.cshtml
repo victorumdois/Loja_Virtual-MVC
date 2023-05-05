@@ -1,0 +1,15 @@
+﻿@model ProdutoModel
+@{
+    ViewData["Title"] = "Deletar produto";
+}
+<h1 class="text-center">Deletar produto</h1>
+<hr />
+
+<h2 class="text-center">Tem certeza que deseja deletar o produto "@Model.Nome" de ID: @Model.Id?</h2>
+<form class="d-flex align-items-center justify-content-center gap-2" style="margin: 1rem 30%" asp-controller="Admin" asp-action="ConfirmDelete">
+	<input type="hidden" asp-for="Id" />
+	<a type="button" class="btn btn-primary w-75"  asp-action="Index">Cancelar</a>
+	<input type="submit" class="btn btn-danger w-25" value="Deletar"/>
+</form>
+
+

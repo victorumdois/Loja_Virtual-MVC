@@ -1,0 +1,53 @@
+﻿@model List<ProdutoModel>
+@{
+	ViewData["Title"] = "Admin";
+}
+
+<h1 class="text-center">ADMIN</h1>
+<hr />
+
+<div>
+	<table class="table table-bordered w-100">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">NOME</th>
+				<th scope="col">DESCRIÇÃO</th>
+				<th scope="col">PREÇO</th>
+				<th scope="col">QUANTIDADE</th>
+				<th scope="col">Imagem 1</th>
+				<th scope="col">Imagem 2</th>
+				<th scope="col">Imagem 3</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			@if (Model != null && Model.Any())
+			{
+				foreach (var produto in Model)
+				{
+							<tr>
+								<th scope="row">@produto.Id</th>
+								<td>@produto.Nome</td>
+								<td>@produto.Descricao</td>
+								<td>R$ @produto.Preco</td>
+								<td>@produto.Quantidade</td>
+								<td>@produto.Imagem1</td>
+								<td>@produto.Imagem2</td>
+								<td>@produto.Imagem3</td>
+								<td>
+									<a asp-route-id="@produto.Id" asp-controller="Admin" asp-action="EditarProduto" type="button" class="btn btn-warning">Editar</a>
+									<a asp-route-id="@produto.Id" asp-controller="Admin" asp-action="DeletarProduto" type="button" class="btn btn-danger">Deletar</a>
+								</td>
+							</tr>
+				}
+			}
+
+		</tbody>
+	</table>
+</div>
+
+
+<div class="d-flex align-items-center justify-content-center">
+	<a class="w-50 p-3 btn btn-primary" asp-controller="Admin" asp-action="AdicionarProduto">Adicionar novo produto</a>
+</div>
