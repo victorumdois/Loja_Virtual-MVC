@@ -15,9 +15,7 @@
 				<th scope="col">DESCRIÇÃO</th>
 				<th scope="col">PREÇO</th>
 				<th scope="col">QUANTIDADE</th>
-				<th scope="col">Imagem 1</th>
-				<th scope="col">Imagem 2</th>
-				<th scope="col">Imagem 3</th>
+				<th scope="col">Imagens</th>
 				<th scope="col"></th>
 			</tr>
 		</thead>
@@ -32,9 +30,11 @@
 								<td>@produto.Descricao</td>
 								<td>R$ @produto.Preco</td>
 								<td>@produto.Quantidade</td>
-								<td>@produto.Imagem1</td>
-								<td>@produto.Imagem2</td>
-								<td>@produto.Imagem3</td>
+								<td>
+									@produto.Imagem1<br>
+									@produto.Imagem2<br>
+									@produto.Imagem3
+								</td>
 								<td>
 									<a asp-route-id="@produto.Id" asp-controller="Admin" asp-action="EditarProduto" type="button" class="btn btn-warning">Editar</a>
 									<a asp-route-id="@produto.Id" asp-controller="Admin" asp-action="DeletarProduto" type="button" class="btn btn-danger">Deletar</a>
