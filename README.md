@@ -2,12 +2,15 @@
 
 # Loja Virtual - MVC
 
-A Loja Virtual - MVC é uma aplicação ASP.NET MVC que permite a criação e gerenciamento de uma loja virtual online. Esta aplicação utiliza o padrão MVC para separar as responsabilidades e tornar o código mais organizado e de fácil manutenção.
+A Loja Virtual - MVC é uma aplicação **ASP.NET** com o padrão de arquitetura **Model-View-Controller** que permite a criação e gerenciamento de uma loja virtual online.
+
+(Algumas partes da aplicação foram implementadas de forma simplificada para facilitar a compreensão do ASP.NET MVC.)
 
 ## Ferramentas
 
 - Visual Studio
 - SQL Server Management Studio
+- Bootstrap
 
 ## Pacotes
 
