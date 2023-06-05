@@ -6,8 +6,16 @@ A Loja Virtual - MVC é uma aplicação **ASP.NET** com o padrão de arquitetura
 
 (Algumas partes da aplicação foram implementadas de forma simplificada para facilitar a compreensão do ASP.NET MVC.)
 
-## Ferramentas
+## Como Executar
 
+- Clone ou faça o download deste repositório.
+- Execute o arquivo `Loja_Virtual-MVC.sln` para abrir o projeto no Visual Studio.
+- Altere a `ConnectionStrings` no arquivo `appsettings.json` se necessário.
+- Abra o Console do Gerenciador de Pacotes e execute o comando `Update-Database` para criar o banco de dados.
+- Aperte CTRL + F5 para iniciar a aplicação.
+
+## Ferramentas e Tecnologias usadas
+- .NET 6.0
 - Visual Studio
 - SQL Server Management Studio
 - Bootstrap
